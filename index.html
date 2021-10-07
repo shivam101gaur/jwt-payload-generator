@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>JWT generator</title>
+</head>
+
+<body>
+    <div class="inputContainer">
+        <h2 style="color: #4d6063;">Token Expires in : </h2>
+        <input type="number" id="duration" min=0 value=1>
+        <select id="timeType">
+            <option value=60000>Minute</option>
+            <option value=3600000>Hours</option>
+            <option value=1000>Seconds</option>
+        </select>
+        <button class="button-8" onclick="generateJWT()"> Generate Payload </button>
+        <button class="button-8" id="linkbtn" onclick="openjwtgenerator()"> Open JWT Generator </button>
+    </div>
+    <div id="output">
+
+    </div>
+    <div id="snackbar">Payload Copied</div>
+
+</body>
+
+</html>
